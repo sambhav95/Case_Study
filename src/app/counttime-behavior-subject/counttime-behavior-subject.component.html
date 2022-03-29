@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainborder">
+    <div class="counter">
+        <div>
+            <app-counttime-display></app-counttime-display>
+           </div>
+        <div class=borderDetail>
+            <div>
+                <label class="mr-3">Enter Time Limit</label>
+           <input type="text" [(ngModel)]="counterValue"
+           appInputValidator inputType="num">
+        </div>
+          <div class="buttonround">
+<br/>
+            <button type="button" class="btn btn-secondary mr-5" (click)="CountDown()">Start/Pause</button>
+            <button  type="button" class="btn btn-secondary" (click)="Reset()">Reset</button>
+          </div>
+
+        </div>
+          
+
+
+       
+    </div>
+     <div class="countDetail"> 
+           <app-buttonstartpause-detail>
+                
+            </app-buttonstartpause-detail>
+            <div>
+                <app-countstartpausebutton-detail></app-countstartpausebutton-detail>
+            </div>
+           
+       
+    </div> 
+</div>
+</body>
+</html>

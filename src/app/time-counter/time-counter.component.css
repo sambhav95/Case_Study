@@ -1,0 +1,30 @@
+.counter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.borderDetail{
+    border: 5px solid;
+    width: 600px;
+    height: 250px;
+    margin: 25px 80px;
+    text-align: center;
+    padding-top: 80px;
+}
+.buttonround{
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.mainborder{
+    border: 5px solid;
+    width: 1250px;
+    margin: 40px 0px 0px 50px;
+}
+.countDetail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}

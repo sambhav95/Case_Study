@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .labelclass{
+            padding-top: 20px;
+            display: inline-block;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div *ngFor="let item of numbers | slice:1">
+            <span class="labelclass">Button: </span>
+                <button class="btn btn-secondary" (click)="clickbutton(item)">
+                Click Me
+            </button>  
+        </div>
+    </div>
+    <div>
+        <div #newButton></div>
+    </div>
+</body>
+</html>

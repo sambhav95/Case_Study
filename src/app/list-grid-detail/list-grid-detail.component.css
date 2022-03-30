@@ -22,16 +22,24 @@
   .btn:hover {
     background-color: #ddd;
   }
+  .mainbox{
+    border: 3px solid;
+    margin-left: 240px;
+    width: 70%;
+    margin-top: 20px;
+  }
   
   .btncontainer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top:40px ;
+    margin-left: 50px;
   }
   .dropdowns{
     text-align: center;
-    margin-right: 550px;
+    margin-right: 85px;
+    margin-top: 7px;
   }
   .optioncss{
     width:100px;

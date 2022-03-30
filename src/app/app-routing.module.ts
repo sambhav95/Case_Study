@@ -1,32 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BorderContentComponent } from './border-content/border-content.component';
-import { ButtonIndexDetailComponent } from './button-index-detail/button-index-detail.component';
-import { CounttimeBehaviorSubjectComponent } from './counttime-behavior-subject/counttime-behavior-subject.component';
-import { ListGridDetailComponent } from './list-grid-detail/list-grid-detail.component';
-import { StudentDetailsComponent } from './student-details/student-details.component';
-import { TimeCounterComponent } from './time-counter/time-counter.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'border', pathMatch: 'full' },
   {path:'border',
-  component: BorderContentComponent
+  loadChildren: () => import('./border-content/border-content.module').then(m => m.BorderContentModule)
 },
 {path:'buttonIndex',
-component:ButtonIndexDetailComponent},
+loadChildren: () => import('./button-index-detail/button-index-detail.module').then(m => m.ButtonIndexDetailModule)},
 {path:'counter',
-component:TimeCounterComponent},
+loadChildren: () => import('./time-counter/time-counter.module').then(m => m.TimeCounterModule)},
 {
   path:'gridView',
-  component:ListGridDetailComponent
+  loadChildren: () => import('./list-grid-detail/list-grid-view.module').then(m => m.ListGridViewModule)
 },
 {
   path:'studentdetails',
-  component:StudentDetailsComponent
+  loadChildren: () => import('./student-details/student-detail.module').then(m => m.StudentDetailModule)
 },
 {
   path:'countersubject',
-  component:CounttimeBehaviorSubjectComponent
+  loadChildren: () => import('./counttime-behavior-subject/counter-behavior-subject.module').then(m => m.CounterBehaviorSubjectModule)
 },
 { path: '**', redirectTo: 'border', pathMatch: 'full' },
 ];
